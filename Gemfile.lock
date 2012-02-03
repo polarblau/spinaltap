@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    vertebrae (0.0.1)
+      rails (~> 3.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -41,6 +47,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
+    minitest (2.11.1)
     multi_json (1.0.4)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -84,4 +91,5 @@ PLATFORMS
 
 DEPENDENCIES
   gem-release (~> 0.1.2)
-  rails
+  minitest (~> 2.11.1)
+  vertebrae!
