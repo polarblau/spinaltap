@@ -1,0 +1,10 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    gem-release (0.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gem-release (~> 0.1.2)
