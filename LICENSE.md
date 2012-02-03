@@ -1,8 +1,9 @@
 MIT LICENSE
 
-Copyright (c)  
-	Piotr Gęga <piotrgega@gmail.com>>
-	Florian Plank <florian@polarblau.com>
+Copyright (c)
+
+  * Florian Plank <florian@polarblau.com>
+  * Piotr Gęga <piotrgega@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

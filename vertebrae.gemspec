@@ -6,8 +6,8 @@ require 'vertebrae/version'
 Gem::Specification.new do |s|
   s.name         = "vertebrae"
   s.version      = Vertebrae::VERSION
-  s.authors      = ["Polarblau"]
-  s.email        = "polarblau@gmail.com"
+  s.authors      = ["Polarblau", "Piotr Gęga"]
+  s.email        = ["polarblau@gmail.com", "piotrgega@gmail.com"]
   s.homepage     = "https://github.com/polarblau/vertebrae"
   s.summary      = "[TODO: summary]"
   s.description  = "[TODO: description]"
