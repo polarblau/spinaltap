@@ -6,11 +6,11 @@ require 'vertebrae/version'
 Gem::Specification.new do |s|
   s.name         = "vertebrae"
   s.version      = Vertebrae::VERSION
-  s.authors      = ["Polarblau"]
-  s.email        = "polarblau@gmail.com"
+  s.authors      = ["Piotr Gęga", "Florian Plank"]
+  s.email        = "florian@polarblau.com"
   s.homepage     = "https://github.com/polarblau/vertebrae"
-  s.summary      = "[TODO: summary]"
-  s.description  = "[TODO: description]"
+  s.summary      = "Yet another Rails / Backbone gem"
+  s.description  = "Simplifies working with Backbone on Rails"
 
   s.files        = `git ls-files app lib`.split("\n")
   s.platform     = Gem::Platform::RUBY
