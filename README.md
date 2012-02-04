@@ -7,7 +7,7 @@
 
 **Guard**
 
-Due to a [https://github.com/guard/guard-minitest/pull/25](bug in the current guard-minitest) version you should use this fork for now: https://github.com/grimen/guard-minitest :
+Due to a [bug in the current guard-minitest](https://github.com/guard/guard-minitest/pull/25) version you should use this fork for now: https://github.com/grimen/guard-minitest :
 
 ```bash
 $ git clone https://github.com/grimen/guard-minitest.git guard-minitest
