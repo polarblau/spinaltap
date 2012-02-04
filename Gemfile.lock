@@ -97,7 +97,6 @@ PLATFORMS
 
 DEPENDENCIES
   gem-release (~> 0.1.2)
-  guard
   guard-minitest
   minitest (~> 2.11.1)
   vertebrae!
