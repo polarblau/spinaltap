@@ -1,9 +1,10 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'test_helper'))
+require File.expand_path(File.join(File.dirname(__FILE__), 'generators_test_helper'))
+
 
 class InstallGeneratorTest < Rails::Generators::TestCase
+  include GeneratorsTestHelper
   tests Vertebrae::Generators::InstallGenerator
-
-  destination File.expand_path("../tmp", File.dirname(__FILE__))
 
   # should have a description
   
@@ -11,29 +12,29 @@ class InstallGeneratorTest < Rails::Generators::TestCase
 
 	def test_should_create_a_models_folder
     run_generator
-    assert_directory "app/assets/javascripts/models"
+    assert_directory "#{javascripts_path}/models"
   end
 
   def test_should_create_a_collections_folder
     run_generator
-    assert_directory "app/assets/javascripts/collections"
+    assert_directory "#{javascripts_path}/collections"
   end
 
   def test_should_create_a_views_folder
     run_generator
-    assert_directory "app/assets/javascripts/views"
+    assert_directory "#{javascripts_path}/views"
   end
 
   def test_should_create_a_templates_folder
     run_generator
-    assert_directory "app/assets/javascripts/templates"
+    assert_directory "#{javascripts_path}/templates"
   end
 
   # should application file
 
   def test_should_create_application_file
     run_generator
-    assert_file "app/assets/javascripts/app.js.coffee"
+    assert_file "#{javascripts_path}/app.js.coffee"
   end
 
 end
