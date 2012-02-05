@@ -9,4 +9,10 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     run_generator
     assert_directory "app/assets/javascripts/models"
   end
+
+	def test_should_create_a_collections_folder
+    run_generator
+    assert_directory "app/assets/javascripts/collections"
+  end
+
 end

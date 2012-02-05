@@ -4,6 +4,7 @@ module Vertebrae
 
       def create_dir_layout
         empty_directory "app/assets/javascripts/models"
+        empty_directory "app/assets/javascripts/collections"
       end
 
     end
