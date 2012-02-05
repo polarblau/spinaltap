@@ -5,6 +5,8 @@ module Vertebrae
     class InstallGenerator < Rails::Generators::Base
       include Vertebrae::Generators::ResourceHelpers
 
+      desc "Generate initial structure and files for your backbone app."
+
       source_root File.expand_path("../templates", __FILE__)
 
       # include views/collections folder and base file?
