@@ -59,4 +59,16 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/models/base_model.js.coffee"
   end
 
+  # options
+
+  def test_should_skip_views_folder
+    run_generator %w(--skip-views)
+    assert_no_directory "#{javascripts_path}/views"
+  end
+
+  def test_should_skip_collections_folder
+    run_generator %w(--skip-collections)
+    assert_no_directory "#{javascripts_path}/collections"
+  end
+
 end

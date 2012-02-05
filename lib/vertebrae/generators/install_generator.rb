@@ -7,6 +7,16 @@ module Vertebrae
 
       source_root File.expand_path("../templates", __FILE__)
 
+      # include views/collections folder and base file?
+      class_option  :views, 
+                    :type    => :boolean, 
+                    :default => true,
+                    :desc    => "Include views folder and base file?"
+      class_option  :collections, 
+                    :type    => :boolean, 
+                    :default => true,
+                    :desc    => "Include collections folder and base file?"
+
       def create_app_initializer_file
         template "app.coffee", "#{javascripts_path}/app.js.coffee"
       end
@@ -16,7 +26,7 @@ module Vertebrae
       end
 
       def create_app_base_files
-        %w(models collections views).each do |directory|
+        base_files.each do |directory|
           file = directory[0..-2]
           path = "#{javascripts_path}/#{directory}/base_#{file}.js.coffee"
           template "base_#{file}.coffee", path
@@ -24,9 +34,18 @@ module Vertebrae
       end
 
       def create_app_folder_structure
-        %w(models collections views templates config).each do |directory|
+        (%w(templates config) | base_files).each do |directory|
           empty_directory "#{javascripts_path}/#{directory}"
         end
+      end
+
+      private
+
+      def base_files
+        files = %w(models)
+        files << "views" if options.views?
+        files << "collections" if options.collections?
+        files
       end
 
     end
