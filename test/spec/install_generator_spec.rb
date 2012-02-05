@@ -1,4 +1,4 @@
-require 'minitest/spec'
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'test_helper'))
  
 describe Vertebrae::Generators::InstallGenerator do
   
@@ -8,7 +8,7 @@ describe Vertebrae::Generators::InstallGenerator do
 
   describe "folder structure creation" do
     it "should create a models folder" do
-    
+      run_generator
     end
   end
 
