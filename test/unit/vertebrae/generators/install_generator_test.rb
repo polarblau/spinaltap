@@ -30,11 +30,33 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_directory "#{javascripts_path}/templates"
   end
 
-  # should application file
+  def test_should_create_a_config_folder
+    run_generator
+    assert_directory "#{javascripts_path}/config"
+  end
+
+  # should generate application file
 
   def test_should_create_application_file
     run_generator
     assert_file "#{javascripts_path}/app.js.coffee"
+  end
+
+  # should generate base applicaton files
+
+  def test_should_create_base_view_file
+    run_generator
+    assert_file "#{javascripts_path}/views/base_view.js.coffee"
+  end
+
+  def test_should_create_base_collection_file
+    run_generator
+    assert_file "#{javascripts_path}/collections/base_collection.js.coffee"
+  end
+
+  def test_should_create_base_collection_file
+    run_generator
+    assert_file "#{javascripts_path}/models/base_model.js.coffee"
   end
 
 end
