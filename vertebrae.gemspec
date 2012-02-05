@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary      = "Yet another Rails / Backbone gem"
   s.description  = "Simplifies working with Backbone on Rails"
 
-  s.files        = `git ls-files app lib`.split("\n")
+  s.files        = `git ls-files lib`.split("\n")
   s.platform     = Gem::Platform::RUBY
   s.require_path = 'lib'
   s.rubyforge_project = '[none]'
@@ -22,5 +22,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "gem-release", "~> 0.1.2"
   s.add_development_dependency "minitest", "~> 2.11.1"
   s.add_development_dependency "guard-minitest"
+  s.add_development_dependency "therubyracer", "~> 0.9.9"
+  s.add_development_dependency "coffee-script", "~> 2.2.0"
 
 end

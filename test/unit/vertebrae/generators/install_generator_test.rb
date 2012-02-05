@@ -39,6 +39,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/app.js.coffee"
   end
 
+
   def test_should_create_routes_file
     run_generator
     assert_file "#{javascripts_path}/config/routes.js.coffee"
