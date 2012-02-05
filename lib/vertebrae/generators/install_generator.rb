@@ -1,5 +1,3 @@
-require File.expand_path(File.join(File.dirname(__FILE__), 'resource_helpers'))
-
 module Vertebrae
   module Generators
     class InstallGenerator < Rails::Generators::Base
