@@ -11,6 +11,10 @@ module Vertebrae
         template "app.coffee", "app/assets/javascripts/app.js.coffee"
       end
 
+      def create_app_router_file
+        template "routes.coffee", "app/assets/javascripts/config/app.js.coffee"
+      end
+
       def create_app_base_files
         %w(models collections views).each do |directory|
           file = directory[0..-2]
