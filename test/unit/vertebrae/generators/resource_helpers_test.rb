@@ -11,7 +11,10 @@ class ResourceHelpersTest < MiniTest::Unit::TestCase
     @helpers = Dummy.new
   end
 
-	def test_app_name_should_have_a_method_javascripts_path
+  # #javascripts_path
+
+  # going to far?
+	def test_should_have_a_method_javascripts_path
     assert @helpers.respond_to?(:javascripts_path)
   end
 
