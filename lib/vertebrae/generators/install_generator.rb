@@ -22,7 +22,7 @@ module Vertebrae
       end
 
       def create_app_router_file
-        template "routes.coffee", "#{javascripts_path}/config/app.js.coffee"
+        template "routes.coffee", "#{javascripts_path}/config/routes.js.coffee"
       end
 
       def create_app_base_files
