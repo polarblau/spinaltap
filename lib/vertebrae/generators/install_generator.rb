@@ -3,10 +3,9 @@ module Vertebrae
     class InstallGenerator < Rails::Generators::Base
 
       def create_dir_layout
-        empty_directory "app/assets/javascripts/models"
-        empty_directory "app/assets/javascripts/collections"
-        empty_directory "app/assets/javascripts/views"
-        empty_directory "app/assets/javascripts/templates"
+        %W{models collections views templates}.each do |dir|
+          empty_directory "app/assets/javascripts/#{dir}"
+        end
       end
 
     end
