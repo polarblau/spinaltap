@@ -52,8 +52,11 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.17.2)
     minitest (2.11.1)
+    mocha (0.10.3)
+      metaclass (~> 0.0.1)
     multi_json (1.0.4)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -97,6 +100,7 @@ PLATFORMS
 
 DEPENDENCIES
   gem-release (~> 0.1.2)
-  guard-minitest
+  guard-minitest (~> 0.4.0)
   minitest (~> 2.11.1)
+  mocha (~> 0.10.3)
   vertebrae!

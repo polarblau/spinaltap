@@ -27,8 +27,9 @@ class ResourceHelpersTest < MiniTest::Unit::TestCase
     assert @helpers.respond_to?(:app_name)
   end
 
-  # def test_should_return_the_rail_app_name_by_default
-
-  # end
+  def test_should_return_the_rail_app_name_by_default
+    Rails.application.class.stubs(:name).returns("TestApp::Application")
+    assert_equal @helpers.app_name, "test_app"
+  end
 
 end

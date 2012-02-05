@@ -7,7 +7,7 @@ module Vertebrae
       end
 
       def app_name
-      	
+      	Rails.application.class.name.split('::').first.underscore
       end
       
     end
