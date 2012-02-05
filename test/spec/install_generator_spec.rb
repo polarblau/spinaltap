@@ -7,11 +7,9 @@ describe Vertebrae::Generators::InstallGenerator do
   end
 
   describe "folder structure creation" do
-    
     it "should create a models folder" do
     
     end
-
   end
 
 end
