@@ -1,3 +1,4 @@
 require "rails/generators"
-require "vertebrae/generators/install_generator"
 require "vertebrae/version"
+require "vertebrae/generators/resource_helpers"
+require "vertebrae/generators/install_generator"

@@ -54,7 +54,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/collections/base_collection.js.coffee"
   end
 
-  def test_should_create_base_collection_file
+  def test_should_create_base_model_file
     run_generator
     assert_file "#{javascripts_path}/models/base_model.js.coffee"
   end
