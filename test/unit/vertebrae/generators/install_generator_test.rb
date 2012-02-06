@@ -39,6 +39,8 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/app.js.coffee"
   end
 
+  # shoudl generate routes 
+
   def test_should_create_routes_file
     run_generator
     assert_file "#{javascripts_path}/config/routes.js.coffee"
@@ -71,6 +73,14 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   def test_should_skip_collections_folder
     run_generator %w(--skip-collections)
     assert_no_directory "#{javascripts_path}/collections"
+  end
+
+  # application file should contain app namespace
+
+  def test_should_create_application_file
+    Rails.application.class.stubs(:name).returns("Foo::Application")
+    run_generator
+    assert_file "#{javascripts_path}/app.js.coffee", /foo/
   end
 
 end
