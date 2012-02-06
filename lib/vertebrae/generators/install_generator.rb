@@ -22,14 +22,14 @@ module Vertebrae
       end
 
       def create_app_router_file
-        template "routes.coffee", "#{javascripts_path}/config/routes.js.coffee"
+        template "config/routes.coffee", "#{javascripts_path}/config/routes.js.coffee"
       end
 
       def create_app_base_files
         base_files.each do |directory|
           file = directory[0..-2]
           path = "#{javascripts_path}/#{directory}/base_#{file}.js.coffee"
-          template "base_#{file}.coffee", path
+          template "#{directory}/base_#{file}.coffee", path
         end  
       end
 
