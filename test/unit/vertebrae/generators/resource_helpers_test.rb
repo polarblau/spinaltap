@@ -2,10 +2,10 @@ require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'te
 
 # is this an appropriate way of testing a module?
 class Dummy
-  include Vertebrae::Generators::ResourceHelpers
+  include Vertebrae::Generators::Helpers
 end
 
-class ResourceHelpersTest < MiniTest::Unit::TestCase
+class GeneratorsHelpersTest < MiniTest::Unit::TestCase
 
   def setup
     @helpers = Dummy.new
