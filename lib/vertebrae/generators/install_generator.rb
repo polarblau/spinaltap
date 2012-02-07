@@ -39,7 +39,7 @@ module Vertebrae
         end
       end
 
-      private
+    private
 
       def base_files
         files = %w(models)

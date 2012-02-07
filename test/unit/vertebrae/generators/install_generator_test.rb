@@ -80,7 +80,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   def test_should_create_application_file
     Rails.application.class.stubs(:name).returns("Foo::Application")
     run_generator
-    assert_file "#{javascripts_path}/app.js.coffee", /foo/
+    assert_file "#{javascripts_path}/app.js.coffee", /Foo =/
   end
 
 end

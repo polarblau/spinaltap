@@ -29,7 +29,29 @@ class GeneratorsHelpersTest < MiniTest::Unit::TestCase
 
   def test_should_return_the_rail_app_name
     Rails.application.class.stubs(:name).returns("TestApp::Application")
-    assert_equal @helpers.app_name, "test_app"
+    assert_equal @helpers.app_name, "TestApp"
+  end
+
+  # #model_namespace
+
+  def test_should_have_a_method_model_namespace
+    assert @helpers.respond_to?(:model_namespace)
+  end
+
+  # test file name conversions: singular, camelCase
+
+  def test_should_return_a_method_model_namespace
+    @helpers.stubs(:app_name).returns("FooBar")
+    @helpers.stubs(:file_name).returns("bat")
+    @helpers.stubs(:regular_class_path).returns(nil)
+    assert_equal @helpers.model_namespace, "FooBar.Models.Bat"
+  end
+
+    def test_should_return_a_nested_method_model_namespace
+    @helpers.stubs(:app_name).returns("FooBar")
+    @helpers.stubs(:file_name).returns("bat")
+    @helpers.stubs(:regular_class_path).returns("nested/folder/structure")
+    assert_equal @helpers.model_namespace, "FooBar.Models.Nested.Folder.Structure.Bat"
   end
 
 end
