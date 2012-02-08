@@ -1,0 +1,1 @@
+class Vertebrae.Base.Collection extends Backbone.Collection
