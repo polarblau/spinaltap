@@ -1,7 +1,7 @@
 module Vertebrae
   module Generators
     class ModelGenerator < Rails::Generators::NamedBase
-      include Vertebrae::Generators::Helpers
+      include Vertebrae::Generators::NamedHelpers
 
       source_root File.expand_path("../templates", __FILE__)
 

@@ -1,5 +1,6 @@
 require "rails/generators"
 require "vertebrae/version"
 require "vertebrae/generators/helpers"
+require "vertebrae/generators/named_helpers"
 require "vertebrae/generators/install/install_generator"
 require "vertebrae/generators/model/model_generator"
