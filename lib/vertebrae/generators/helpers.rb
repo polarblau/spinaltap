@@ -11,8 +11,16 @@ module Vertebrae
       end
 
       def model_namespace
-        model_name = file_name.singularize.camelize
-        [app_name, "Models", name_space_fragments, model_name].flatten.join(".")
+        javascript_namespace_for "Models"
+      end
+
+      def javascript_namespace_for(folder)
+        [
+          app_name, 
+          folder, 
+          name_space_fragments, 
+          file_name.singularize.camelize
+        ].flatten.join(".")
       end
 
     private

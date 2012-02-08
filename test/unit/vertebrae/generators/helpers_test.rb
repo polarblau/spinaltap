@@ -32,26 +32,30 @@ class GeneratorsHelpersTest < MiniTest::Unit::TestCase
     assert_equal @helpers.app_name, "TestApp"
   end
 
-  # #model_namespace
+  # #javascript_namespace_for
 
-  def test_should_have_a_method_model_namespace
-    assert @helpers.respond_to?(:model_namespace)
+  def test_should_have_a_method_javascript_namespace_for
+    assert @helpers.respond_to?(:javascript_namespace_for)
   end
 
-  # test file name conversions: singular, camelCase
-
-  def test_should_return_a_method_model_namespace
+  def test_should_return_a_method_javascript_namespace_for
     @helpers.stubs(:app_name).returns("FooBar")
     @helpers.stubs(:file_name).returns("bat")
     @helpers.stubs(:regular_class_path).returns(nil)
-    assert_equal @helpers.model_namespace, "FooBar.Models.Bat"
+    assert_equal @helpers.javascript_namespace_for("Foo"), "FooBar.Foo.Bat"
   end
 
     def test_should_return_a_nested_method_model_namespace
     @helpers.stubs(:app_name).returns("FooBar")
     @helpers.stubs(:file_name).returns("bat")
     @helpers.stubs(:regular_class_path).returns("nested/folder/structure")
-    assert_equal @helpers.model_namespace, "FooBar.Models.Nested.Folder.Structure.Bat"
+    assert_equal @helpers.javascript_namespace_for("Foo"), "FooBar.Foo.Nested.Folder.Structure.Bat"
+  end
+
+  # #model_namespace
+
+  def test_should_have_a_method_model_namespace
+    assert @helpers.respond_to?(:model_namespace)
   end
 
 end
