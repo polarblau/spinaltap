@@ -5,7 +5,7 @@ module Vertebrae
 
       source_root File.expand_path("../templates", __FILE__)
 
-      hook_for :orm, :as => :model, :required => true
+      hook_for :orm, :as => :model
       
       def create_model
         path = File.join(javascripts_path, "models", class_path, "#{file_name}.js.coffee")
