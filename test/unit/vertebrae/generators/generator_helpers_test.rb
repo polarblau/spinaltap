@@ -4,7 +4,7 @@ class GeneratorHelpersTest < MiniTest::Unit::TestCase
 
   def setup
     @helpers = Object.new
-    @helpers.extend(Vertebrae::Generators::Helpers)
+    @helpers.extend(Vertebrae::Generators::GeneratorHelpers)
   end
 
   # #javascripts_path

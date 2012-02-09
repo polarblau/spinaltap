@@ -1,7 +1,7 @@
   module Vertebrae
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      include Vertebrae::Generators::Helpers
+      include Vertebrae::Generators::GeneratorHelpers
 
       desc "Generate initial structure and files for your backbone app."
 

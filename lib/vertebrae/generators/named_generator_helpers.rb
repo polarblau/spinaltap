@@ -1,7 +1,7 @@
 module Vertebrae
   module Generators
-    module NamedHelpers
-      include Vertebrae::Generators::Helpers
+    module NamedGeneratorHelpers
+      include Vertebrae::Generators::GeneratorHelpers
 
       def model_namespace
         javascript_namespace_for "Models"

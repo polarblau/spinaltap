@@ -1,6 +1,6 @@
 module Vertebrae
   module Generators
-    module Helpers
+    module GeneratorHelpers
       
       def javascripts_path
         "app/assets/javascripts"
