@@ -7,7 +7,7 @@ module Vertebrae
 
       def create_model
         # replace regular_class_path with a secure helper
-        path = File.join(javascripts_path, "models", regular_class_path, "#{file_name}.js.coffee")
+        path = File.join(javascripts_path, "models", class_path, "#{file_name}.js.coffee")
         template "model.coffee", path
       end
     

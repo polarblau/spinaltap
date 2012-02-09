@@ -11,7 +11,7 @@ module Vertebrae
         [
           app_name, 
           folder, 
-          name_space_fragments, 
+          class_path.map(&:camelize), 
           file_name.singularize.camelize
         ].flatten.join(".")
       end
