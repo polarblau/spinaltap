@@ -60,7 +60,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
 
   # application file should contain app namespace
 
-  def test_should_create_application_file
+  def test_should_create_application_file_with_namespace
     Rails.application.class.stubs(:name).returns("Foo::Application")
     run_generator
     assert_file "#{javascripts_path}/app.js.coffee", /Foo =/
@@ -79,7 +79,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     refute_nil RailsTestApp::Application.assets["backbone"]
   end
 
-  def test_should_include_backbone_dependency
+  def test_should_include_underscore_dependency
     refute_nil RailsTestApp::Application.assets["underscore"]
   end
 
