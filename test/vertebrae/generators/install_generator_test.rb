@@ -7,7 +7,15 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   
   # should generate folder structure
 
-	def test_should_create_a_models_folder
+  def setup
+    reload_fixtures
+  end
+
+  def teardown
+    cleanup_tmp_dir
+  end
+
+  def test_should_create_a_models_folder
     run_generator
     assert_directory "#{javascripts_path}/models"
   end
@@ -70,7 +78,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   
   def test_should_include_requirement_into_manifest
     run_generator
-    assert_match "#{javascripts_path}/applications.js", /\/\/= require vertebrae/
+    assert_file "#{javascripts_path}/application.js", /\/\/= require vertebrae/
   end
 
   # should include dependencies

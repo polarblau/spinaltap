@@ -1,8 +1,9 @@
 module GeneratorsTestHelper
 
   def self.included(base)
+    path = destination_root
     base.class_eval do
-      destination File.expand_path("../tmp", File.dirname(__FILE__))
+      destination path
       setup :prepare_destination
     end
   end
@@ -10,5 +11,5 @@ module GeneratorsTestHelper
   def javascripts_path
     "app/assets/javascripts"
   end
-  
+
 end
