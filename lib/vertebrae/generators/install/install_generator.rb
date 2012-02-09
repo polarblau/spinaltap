@@ -8,14 +8,17 @@
       source_root File.expand_path("../templates", __FILE__)
 
       # include views/collections folder and base file?
-      class_option  :views, 
+      class_option  :skip_views, 
                     :type    => :boolean, 
-                    :default => true,
-                    :desc    => "Include views folder and base file?"
-      class_option  :collections, 
+                    :default => false,
+                    :desc    => "Exclude views folder and base file?"
+      class_option  :skip_collections, 
                     :type    => :boolean, 
-                    :default => true,
-                    :desc    => "Include collections folder and base file?"
+                    :default => false,
+                    :desc    => "Exclude collections folder and base file?"
+
+      def create_initializer
+      end
 
       def create_app_initializer_file
         template "app.coffee", "#{javascripts_path}/app.js.coffee"
@@ -27,8 +30,8 @@
 
       def create_app_folder_structure
         directories = %w(models templates)
-        directories << 'views' if options.views?
-        directories << 'collections' if options.collections?
+        directories << 'views' unless options.skip_views?
+        directories << 'collections' unless options.skip_collections?
         directories.each do |directory|
           empty_directory "#{javascripts_path}/#{directory}"
         end

@@ -1,5 +1,5 @@
 # setup namespace
 <%= app_name %> =
-	Views      : {}
+  Views      : {}
   Models     : {}
   Collections: {}
