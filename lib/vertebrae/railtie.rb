@@ -7,9 +7,3 @@ module Vertebrae
     
   end
 end
-
-module Rails::Generators
-  class ModelGenerator < NamedBase
-    hook_for :vertebrae
-  end
-end
