@@ -1,0 +1,3 @@
+window.Vertebrae =
+	Base   = {}
+  Config = {}
