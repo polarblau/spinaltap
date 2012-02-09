@@ -17,9 +17,10 @@
                     :default => false,
                     :desc    => "Exclude collections folder and base file?"
 
-      def add_asset_precompile_config
-        application do
-          "config.assets.precompile += ['vertebrae.js']"
+      def add_asset_mainfest
+        insert_into_file "app/assets/javascripts/application.js", 
+          :before => %r{//= require +['"]?jquery['"]?} do
+            "\n//= require 'vertebrae/vertebrae'\n\n"
         end
       end
 
