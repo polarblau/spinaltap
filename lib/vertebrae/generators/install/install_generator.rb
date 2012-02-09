@@ -17,6 +17,8 @@
                     :default => false,
                     :desc    => "Exclude collections folder and base file?"
 
+      # http://stackoverflow.com/questions/9211689/rails-add-assets-to-mainfest-from-within-gem
+      # would be really nice to find a better solution for this:
       def add_asset_mainfest
         insert_into_file "app/assets/javascripts/application.js", 
           :before => %r{//= require +['"]?jquery['"]?\n} do

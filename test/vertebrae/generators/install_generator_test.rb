@@ -67,7 +67,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   end
 
   # should include require into application.js
-
+  
   def test_should_include_requirement_into_manifest
     run_generator
     assert_match "#{javascripts_path}/applications.js", /\/\/= require vertebrae/
