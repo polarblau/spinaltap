@@ -19,7 +19,7 @@
 
       def add_asset_mainfest
         insert_into_file "app/assets/javascripts/application.js", 
-          :before => %r{//= require +['"]?jquery['"]\\n?} do
+          :before => %r{//= require +['"]?jquery['"]?\n} do
             "//= require 'vertebrae/vertebrae'"
         end
       end
