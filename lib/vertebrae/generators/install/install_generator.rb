@@ -17,7 +17,10 @@
                     :default => false,
                     :desc    => "Exclude collections folder and base file?"
 
-      def create_initializer
+      def add_asset_precompile_config
+        application do
+          "config.assets.precompile += ['vertebrae.js']"
+        end
       end
 
       def create_app_initializer_file
