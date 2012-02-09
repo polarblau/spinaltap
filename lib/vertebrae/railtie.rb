@@ -1,18 +1,17 @@
 require 'rails'
 
 module Vertebrae
-  module Rails
-    class Railtie < Rails::Railtie
+  class Railtie < Rails::Railtie
 
-      config.app_generators.orm :vertebrae
-      # # Rails-3.0.1 requires config.app_generators instead of 3.0.0's config.generators
-      # generators = config.respond_to?(:app_generators) ? config.app_generators : config.generators
-      # generators.integration_tool :rspec
-      # generators.test_framework   :rspec
+    config.app_generators.orm :vertebrae
+    
+    # # Rails-3.0.1 requires config.app_generators instead of 3.0.0's config.generators
+    # generators = config.respond_to?(:app_generators) ? config.app_generators : config.generators
+    # generators.integration_tool :rspec
+    # generators.test_framework   :rspec
 
-      # rake_tasks do
-      #   load "rspec/rails/tasks/rspec.rake"
-      # end
-    end
+    # rake_tasks do
+    #   load "rspec/rails/tasks/rspec.rake"
+    # end
   end
 end
