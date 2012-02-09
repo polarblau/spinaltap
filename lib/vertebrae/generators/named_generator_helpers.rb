@@ -9,22 +9,11 @@ module Vertebrae
 
       def javascript_namespace_for(folder)
         [
-          app_name, 
-          folder, 
-          class_path.map(&:camelize), 
-          file_name.singularize.camelize
+          app_name,                        # name of the rails application
+          folder.camelize,                 # folder passed as argument
+          class_path.map(&:camelize),      # path extracted from file name
+          file_name.singularize.camelize   # file name without path
         ].flatten.join(".")
-      end
-
-    private
-      
-      # http://api.rubyonrails.org/classes/Rails/Generators/NamedBase.html#method-i-regular_class_path
-      def name_space_fragments
-        if regular_class_path.is_a? String
-          regular_class_path.split('/').map(&:camelize)
-        else
-          regular_class_path.map(&:camelize)
-        end
       end
         
     end
