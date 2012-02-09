@@ -66,4 +66,21 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/app.js.coffee", /Foo =/
   end
 
+  # should include require into application.js
+
+  def test_should_include_requirement_into_manifest
+    run_generator
+    assert_match "#{javascripts_path}/applications.js", /\/\/= require vertebrae/
+  end
+
+  # should include dependencies
+
+  def test_should_include_backbone_dependency
+    refute_nil RailsTestApp::Application.assets["backbone"]
+  end
+
+  def test_should_include_backbone_dependency
+    refute_nil RailsTestApp::Application.assets["underscore"]
+  end
+
 end
