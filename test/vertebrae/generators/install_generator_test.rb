@@ -76,10 +76,12 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   # should include dependencies
 
   def test_should_include_backbone_dependency
+    skip
     refute_nil RailsTestApp::Application.assets["backbone"]
   end
 
   def test_should_include_underscore_dependency
+    skip
     refute_nil RailsTestApp::Application.assets["underscore"]
   end
 
