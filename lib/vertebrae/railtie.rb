@@ -9,7 +9,7 @@ module Vertebrae
 end
 
 module Rails::Generators
-  class ModelGenerator < Base
+  class ModelGenerator < NamedBase
     hook_for :vertebrae
   end
 end
