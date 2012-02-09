@@ -26,7 +26,7 @@
       end
 
       def create_app_folder_structure
-        directories = %w(models templates config)
+        directories = %w(models templates)
         directories << 'views' if options.views?
         directories << 'collections' if options.collections?
         directories.each do |directory|
