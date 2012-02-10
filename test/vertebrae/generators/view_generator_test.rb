@@ -9,17 +9,17 @@ class ViewGeneratorTest < Rails::Generators::TestCase
 
   def test_should_create_a_view_file
     run_generator %w(foo)
-    assert_file "#{javascripts_path}/views/foos.js.coffee"
+    assert_file "#{javascripts_path}/views/foo.js.coffee"
   end
 
   def test_should_create_a_view_file_in_nested_folders
     run_generator %w(bar/baz/bat/person)
-    assert_file "#{javascripts_path}/views/bar/baz/bat/people.js.coffee"
+    assert_file "#{javascripts_path}/views/bar/baz/bat/person.js.coffee"
   end
 
-  def test_should_create_a_view_file_and_convert_the_name
-    run_generator %w(person)
-    assert_file "#{javascripts_path}/views/people.js.coffee"
+  def test_should_convert_the_file_name
+    run_generator %w(FooBar-Bat)
+    assert_file "#{javascripts_path}/views/foo_bar_bat.js.coffee"
   end
 
   # should generate a template alongside
@@ -33,7 +33,7 @@ class ViewGeneratorTest < Rails::Generators::TestCase
   def test_should_create_a_view_file_with_correct_name
     Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator %w(person)
-    assert_file "#{javascripts_path}/views/people.js.coffee", /class TestApp.Views.People/ 
+    assert_file "#{javascripts_path}/views/person.js.coffee", /class TestApp.Views.People/ 
   end
 
 end

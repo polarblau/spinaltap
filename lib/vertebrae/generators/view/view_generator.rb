@@ -13,7 +13,7 @@ module Vertebrae
                     :desc    => "Don't generate a template file as well?"
       
       def create_view
-        path = File.join(javascripts_path, "views", class_path, "#{file_name.pluralize}.js.coffee")
+        path = File.join(javascripts_path, "views", class_path, "#{file_name}.js.coffee")
         template "view.coffee", path
       end
 
