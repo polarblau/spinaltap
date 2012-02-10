@@ -3,3 +3,4 @@
   Views      : {}
   Models     : {}
   Collections: {}
+  Config     : {}

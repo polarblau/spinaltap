@@ -36,11 +36,5 @@ class NamedGeneratorHelpersTest < MiniTest::Unit::TestCase
   def test_should_have_a_method_view_namespace
     assert @helpers.respond_to?(:view_namespace)
   end
-
-  # #router_namespace
-
-  def test_should_have_a_method_router_namespace
-    assert @helpers.respond_to?(:router_namespace)
-  end
   
 end
