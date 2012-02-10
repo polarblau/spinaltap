@@ -11,6 +11,14 @@ module Vertebrae
         javascript_namespace_for "Collections", file_name.pluralize.camelize
       end
 
+      def view_namespace
+        javascript_namespace_for "Views", file_name.pluralize.camelize
+      end
+
+      def template_namespace
+        [class_path, file_name.pluralize].flatten.join('/')
+      end
+
       def javascript_namespace_for(folder, file)
         [
           app_name,                        # name of the rails application

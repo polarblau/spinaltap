@@ -9,17 +9,37 @@ class ViewGeneratorTest < Rails::Generators::TestCase
 
   def test_should_create_a_view_file
     run_generator %w(foo)
-    assert_file "#{javascripts_path}/views/foos_index.js.coffee"
+    assert_file "#{javascripts_path}/views/foos.js.coffee"
   end
 
   def test_should_create_a_view_file_in_nested_folders
     run_generator %w(bar/baz/bat/person)
-    assert_file "#{javascripts_path}/views/bar/baz/bat/people_index.js.coffee"
+    assert_file "#{javascripts_path}/views/bar/baz/bat/people.js.coffee"
   end
 
-  def test_should_create_a_model_file_and_convert_the_name
+  def test_should_create_a_view_file_and_convert_the_name
     run_generator %w(person)
-    assert_file "#{javascripts_path}/views/people_index.js.coffee"
+    assert_file "#{javascripts_path}/views/people.js.coffee"
+  end
+
+  # should generate a template
+
+  def test_should_create_a_template_file
+    run_generator %w(person)
+    assert_file "#{assets_path}/templates/people.jst.eco"
+  end
+
+  def test_should_create_a_template_file_in_nested_folders
+    run_generator %w(bar/baz/bat/person)
+    assert_file "#{assets_path}/views/bar/baz/bat/people.jst.eco"
   end
  
+  # # should contain model name
+
+  def test_should_create_a_view_file_with_correct_name
+    Rails.application.class.stubs(:name).returns("TestApp::Application")
+    run_generator %w(person)
+    assert_file "#{javascripts_path}/views/people.js.coffee", /class TestApp.Views.People/ 
+  end
+
 end

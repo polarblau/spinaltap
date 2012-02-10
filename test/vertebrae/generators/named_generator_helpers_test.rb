@@ -13,14 +13,28 @@ class NamedGeneratorHelpersTest < MiniTest::Unit::TestCase
     assert @helpers.respond_to?(:javascript_namespace_for)
   end
 
-  # def test_javascripts_path_should_return_string
-  #   assert_kind_of String, @helpers.javascript_namespace_for('Folder')
-  # end
-
   # #model_namespace
 
   def test_should_have_a_method_model_namespace
     assert @helpers.respond_to?(:model_namespace)
+  end
+
+  # #collection_namespace
+
+  def test_should_have_a_method_collection_namespace
+    assert @helpers.respond_to?(:collection_namespace)
+  end
+
+  # #view_namespace
+
+  def test_should_have_a_method_view_namespace
+    assert @helpers.respond_to?(:view_namespace)
+  end
+
+  # #template_namespace
+
+  def test_should_have_a_method_view_namespace
+    assert @helpers.respond_to?(:view_namespace)
   end
   
 end
