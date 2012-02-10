@@ -39,3 +39,13 @@ end
 def cleanup_tmp_dir
   FileUtils.rm_rf(destination_root)
 end
+
+
+# https://github.com/seattlerb/minitest/blob/master/lib/minitest/unit.rb
+module MiniTest
+  module Assertions
+    def assert_equal_fixture(file, fixture, msg = nil)
+      
+    end
+  end
+ end
