@@ -7,7 +7,6 @@
 
       source_root File.expand_path("../templates", __FILE__)
 
-      # include views/collections folder and base file?
       class_option  :skip_views, 
                     :type    => :boolean, 
                     :default => false,

@@ -3,6 +3,8 @@ module Vertebrae
     class ModelGenerator < Rails::Generators::NamedBase
       include Vertebrae::Generators::NamedGeneratorHelpers
 
+      desc "Generate Backbone model inheriting from Base.Model ."
+
       source_root File.expand_path("../templates", __FILE__)
       
       def create_model

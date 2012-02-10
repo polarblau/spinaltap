@@ -22,6 +22,13 @@ class CollectionGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/collections/users.js.coffee"
   end
 
+  # options
+
+  def test_should_skip_model
+    run_generator %w(user --skip-model)
+    assert_no_file "#{javascripts_path}/models/user.js.coffee"
+  end
+
   # should generate a model alongside
   # should we just test that the model generator receives #start ?
 
