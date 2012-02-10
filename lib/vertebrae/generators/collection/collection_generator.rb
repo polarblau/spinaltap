@@ -13,7 +13,7 @@ module Vertebrae
                     :desc    => "Don't generate a model file as well?"
 
       def create_collection
-        path = File.join(javascripts_path, "collections", class_path, "#{file_name.pluralize}.js.coffee")
+        path = File.join(javascripts_path, "collections", class_path, "#{plural_file_name}.js.coffee")
         template "collection.coffee", path
       end
 

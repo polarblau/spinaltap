@@ -8,7 +8,7 @@ module Vertebrae
       end
 
       def collection_namespace
-        javascript_namespace_for "Collections", file_name.pluralize.camelize
+        javascript_namespace_for "Collections", plural_file_name.camelize
       end
 
       def view_namespace
