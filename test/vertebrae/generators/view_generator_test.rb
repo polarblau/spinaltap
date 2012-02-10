@@ -33,7 +33,7 @@ class ViewGeneratorTest < Rails::Generators::TestCase
   def test_should_create_a_view_file_with_correct_name
     Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator %w(person)
-    assert_file "#{javascripts_path}/views/person.js.coffee", /class TestApp.Views.People/ 
+    assert_file "#{javascripts_path}/views/person.js.coffee", /class TestApp.Views.Person/ 
   end
 
 end

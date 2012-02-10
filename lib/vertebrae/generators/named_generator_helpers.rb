@@ -12,11 +12,11 @@ module Vertebrae
       end
 
       def view_namespace
-        javascript_namespace_for "Views", file_name.pluralize.camelize
+        javascript_namespace_for "Views", file_name.camelize
       end
 
       def template_namespace
-        [class_path, file_name.pluralize].flatten.join('/')
+        [class_path, file_name].flatten.join('/')
       end
 
       def javascript_namespace_for(folder, file)
