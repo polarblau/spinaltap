@@ -8,7 +8,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   # should generate folder structure
 
   def setup
-    reload_fixtures
+    reload_core
   end
 
   def teardown
