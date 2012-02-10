@@ -7,7 +7,7 @@ class ModelGeneratorTest < Rails::Generators::TestCase
   
   # should generate a model
 
-	def test_should_create_a_model_file
+  def test_should_create_a_model_file
     run_generator %w(foo)
     assert_file "#{javascripts_path}/models/foo.js.coffee"
   end
