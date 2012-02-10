@@ -70,6 +70,19 @@ class InstallGeneratorTest < Rails::Generators::TestCase
     assert_no_directory "#{javascripts_path}/collections"
   end
 
+  def test_should_skip_templates_folder
+    run_generator %w(--skip-templates)
+    assert_no_directory "#{assets_path}/templates"
+  end
+
+    def test_should_skip_gitkeep_files
+    run_generator %w(--skip-gitkeep)
+    assert_no_file "#{javascripts_path}/models/.gitkeep"
+    assert_no_file "#{javascripts_path}/collections/.gitkeep"
+    assert_no_file "#{javascripts_path}/views/.gitkeep"
+    assert_no_file "#{assets_path}/templates/.gitkeep"
+  end
+
   # application file should contain app namespace
 
   def test_should_create_application_file_with_namespace

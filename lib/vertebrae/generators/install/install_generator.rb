@@ -15,6 +15,14 @@ module Vertebrae
                     :type    => :boolean, 
                     :default => false,
                     :desc    => "Exclude collections folder and base file?"
+      class_option  :skip_templates, 
+                    :type    => :boolean, 
+                    :default => false,
+                    :desc    => "Exclude templates folder?"
+      class_option  :skip_gitkeep, 
+                    :type    => :boolean, 
+                    :default => false,
+                    :desc    => "Skip generation of .gitkeep files for empty folders?"                    
 
       def add_asset_mainfest
         insert_into_file "app/assets/javascripts/application.js",
@@ -32,8 +40,12 @@ module Vertebrae
       end
 
       def create_templates_directory
-        empty_directory "#{assets_path}/templates"
-        create_file "#{assets_path}/templates/.gitkeep", :verbose => false
+        unless options.skip_templates?
+          empty_directory "#{assets_path}/templates"
+          unless options.skip_gitkeep?
+            create_file "#{assets_path}/templates/.gitkeep", :verbose => false
+          end
+        end
       end
 
       def create_app_folder_structure
@@ -42,7 +54,9 @@ module Vertebrae
         directories << 'collections' unless options.skip_collections?
         directories.each do |directory|
           empty_directory "#{javascripts_path}/#{directory}"
-          create_file "#{javascripts_path}/#{directory}/.gitkeep", :verbose => false
+          unless options.skip_gitkeep?
+            create_file "#{javascripts_path}/#{directory}/.gitkeep", :verbose => false
+          end
         end
       end
 
