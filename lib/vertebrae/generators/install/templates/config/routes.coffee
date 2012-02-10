@@ -1,0 +1,1 @@
+class <%= router_namespace %>.ApplicationController extends Vertebrae.Base.Router

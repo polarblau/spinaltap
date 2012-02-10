@@ -86,9 +86,9 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   # application file should contain app namespace
 
   def test_should_create_application_file_with_namespace
-    Rails.application.class.stubs(:name).returns("Foo::Application")
+    Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator
-    assert_file "#{javascripts_path}/app.js.coffee", /Foo =/
+    assert_file "#{javascripts_path}/app.js.coffee", /TestApp =/
   end
 
   # should include require into application.js

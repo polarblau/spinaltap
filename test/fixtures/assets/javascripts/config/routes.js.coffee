@@ -1,0 +1,1 @@
+class TestApp.Routers.ApplicationRouter extends Backbone.Router

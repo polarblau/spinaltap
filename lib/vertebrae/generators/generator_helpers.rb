@@ -10,6 +10,10 @@ module Vertebrae
         "#{assets_path}/javascripts"
       end
 
+      def router_namespace
+        [app_name, "Routers"].join(".")
+      end
+
       def app_name
       	Rails.application.class.name.split('::').first
       end
