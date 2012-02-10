@@ -31,7 +31,7 @@ class ViewGeneratorTest < Rails::Generators::TestCase
 
   def test_should_create_a_template_file_in_nested_folders
     run_generator %w(bar/baz/bat/person)
-    assert_file "#{assets_path}/views/bar/baz/bat/people.jst.eco"
+    assert_file "#{assets_path}/templates/bar/baz/bat/people.jst.eco"
   end
  
   # # should contain model name

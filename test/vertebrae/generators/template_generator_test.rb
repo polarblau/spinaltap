@@ -8,7 +8,8 @@ class TemplateGeneratorTest < Rails::Generators::TestCase
   # should generate a template
 
   def test_should_create_a_template_file
-    skip
+    run_generator %w(bar/baz/bat/person)
+    assert_file "#{assets_path}/templates/bar/baz/bat/people.jst.eco"
   end
  
 end

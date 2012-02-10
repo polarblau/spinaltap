@@ -18,7 +18,7 @@ module Vertebrae
       end
 
       def create_template
-        # invoke "vertebrae:template" unless options.skip_template?
+        invoke "vertebrae:template" unless options.skip_template?
       end
     
     end
