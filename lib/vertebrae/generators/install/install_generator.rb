@@ -1,4 +1,4 @@
-  module Vertebrae
+module Vertebrae
   module Generators
     class InstallGenerator < Rails::Generators::Base
       include Vertebrae::Generators::GeneratorHelpers
@@ -16,8 +16,6 @@
                     :default => false,
                     :desc    => "Exclude collections folder and base file?"
 
-      # http://stackoverflow.com/questions/9211689/rails-add-assets-to-mainfest-from-within-gem
-      # would be really nice to find a better solution for this:
       def add_asset_mainfest
         insert_into_file "app/assets/javascripts/application.js",
           :before => %r{//= require +['"]?jquery['"]?\n} do
@@ -33,8 +31,12 @@
         template "config/routes.coffee", "#{javascripts_path}/config/routes.js.coffee"
       end
 
+      def create_templates_directory
+        empty_directory "#{assets_path}/templates"
+      end
+
       def create_app_folder_structure
-        directories = %w(models templates)
+        directories = %w(models)
         directories << 'views' unless options.skip_views?
         directories << 'collections' unless options.skip_collections?
         directories.each do |directory|

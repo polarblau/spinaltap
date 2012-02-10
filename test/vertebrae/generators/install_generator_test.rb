@@ -32,7 +32,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
 
   def test_should_create_a_templates_folder
     run_generator
-    assert_directory "#{javascripts_path}/templates"
+    assert_directory "#{assets_path}/templates"
   end
 
   def test_should_create_a_config_folder

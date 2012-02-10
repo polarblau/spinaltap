@@ -8,8 +8,12 @@ module GeneratorsTestHelper
     end
   end
   
+  def assets_path
+    "app/assets"
+  end
+
   def javascripts_path
-    "app/assets/javascripts"
+    "#{assets_path}/javascripts"
   end
 
 end

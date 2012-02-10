@@ -2,8 +2,12 @@ module Vertebrae
   module Generators
     module GeneratorHelpers
       
+      def assets_path
+        "app/assets"
+      end
+
       def javascripts_path
-        "app/assets/javascripts"
+        "#{assets_path}/javascripts"
       end
 
       def app_name
