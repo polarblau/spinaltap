@@ -17,6 +17,11 @@ class ModelGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/models/bar/baz/bat/foo.js.coffee"
   end
 
+  def test_should_create_a_model_file_and_convert_the_name
+    run_generator %w(users)
+    assert_file "#{javascripts_path}/models/user.js.coffee"
+  end
+
   # # should contain model name
 
   def test_should_create_a_model_file_with_correct_name

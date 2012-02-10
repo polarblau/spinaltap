@@ -9,7 +9,11 @@ module Vertebrae
         path = File.join(javascripts_path, "Collections", class_path, "#{file_name.pluralize}.js.coffee")
         template "collection.coffee", path
       end
-    
+
+      def create_model
+        invoke "vertebrae:model"
+      end
+        
     end
   end
 end
