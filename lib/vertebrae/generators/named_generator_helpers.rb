@@ -16,7 +16,7 @@ module Vertebrae
       end
 
       def template_namespace
-        [class_path, file_name].flatten.join('/')
+        [class_path, file_name.underscore].flatten.join('/')
       end
 
       def javascript_namespace_for(folder, file)
