@@ -7,6 +7,16 @@ class GeneratorHelpersTest < MiniTest::Unit::TestCase
     @helpers.extend(Vertebrae::Generators::GeneratorHelpers)
   end
 
+  # #assets_path
+
+  def test_should_have_a_method_assets_path
+    assert @helpers.respond_to?(:assets_path)
+  end
+
+  def test_assets_path_should_return_string
+    assert_kind_of String, @helpers.assets_path
+  end
+
   # #javascripts_path
 
   def test_should_have_a_method_javascripts_path
@@ -31,5 +41,6 @@ class GeneratorHelpersTest < MiniTest::Unit::TestCase
     Rails.application.class.stubs(:name).returns("TestApp::Application")
     assert_equal @helpers.app_name, "TestApp"
   end
+
 
 end
