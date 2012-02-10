@@ -9,7 +9,7 @@ class CollectionGeneratorTest < Rails::Generators::TestCase
 
   def test_should_create_a_collection_file
     run_generator %w(users)
-    assert_file "#{javascripts_path}/models/users.js.coffee"
+    assert_file "#{javascripts_path}/collections/users.js.coffee"
   end
 
   def test_should_create_a_collection_file_in_nested_folders
@@ -19,7 +19,7 @@ class CollectionGeneratorTest < Rails::Generators::TestCase
 
     def test_should_create_a_collection_file_and_convert_the_name
     run_generator %w(user)
-    assert_file "#{javascripts_path}/collections/bar/baz/bat/users.js.coffee"
+    assert_file "#{javascripts_path}/collections/users.js.coffee"
   end
 
   # should generate a model
