@@ -8,7 +8,7 @@ module Vertebrae
       source_root File.expand_path("../templates", __FILE__)
       
       def create_template
-        path = File.join(assets_path, "templates", class_path, "#{file_name.underscore}.jst.eco")
+        path = File.join(assets_path, "templates", class_path, "#{file_name}.jst.eco")
         template "template.jst.eco", path
       end
     
