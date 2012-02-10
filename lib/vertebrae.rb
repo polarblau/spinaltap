@@ -1,5 +1,6 @@
 require "rails"
 require "rails/generators/model_generator"
+require "rails/generators/resource_generator"
 
 require "vertebrae/version"
 require "vertebrae/engine"
