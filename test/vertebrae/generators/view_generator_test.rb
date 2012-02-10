@@ -22,19 +22,13 @@ class ViewGeneratorTest < Rails::Generators::TestCase
     assert_file "#{javascripts_path}/views/people.js.coffee"
   end
 
-  # should generate a template
+  # should generate a template alongside
 
-  def test_should_create_a_template_file
-    run_generator %w(person)
-    assert_file "#{assets_path}/templates/people.jst.eco"
-  end
-
-  def test_should_create_a_template_file_in_nested_folders
-    run_generator %w(bar/baz/bat/person)
-    assert_file "#{assets_path}/templates/bar/baz/bat/people.jst.eco"
+  def test_should_trigger_template_generator
+    skip
   end
  
-  # # should contain model name
+  # should contain view name
 
   def test_should_create_a_view_file_with_correct_name
     Rails.application.class.stubs(:name).returns("TestApp::Application")

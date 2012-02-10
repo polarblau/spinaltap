@@ -30,25 +30,9 @@ class CollectionGeneratorTest < Rails::Generators::TestCase
   end
 
   # should generate a model alongside
-  # should we just test that the model generator receives #start ?
 
   def test_should_trigger_model_generator
     skip
   end
 
-  def test_should_create_a_model_file
-    run_generator %w(user)
-    assert_file "#{javascripts_path}/models/user.js.coffee"
-  end
- 
-  def test_should_create_a_model_file_in_nested_folders
-    run_generator %w(bar/baz/bat/user)
-    assert_file "#{javascripts_path}/models/bar/baz/bat/user.js.coffee"
-  end
-
-  def test_should_create_a_model_file_and_convert_the_name
-    run_generator %w(people)
-    assert_file "#{javascripts_path}/models/person.js.coffee"
-  end
- 
 end
