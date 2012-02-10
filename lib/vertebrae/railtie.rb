@@ -9,7 +9,7 @@ end
 
 module Rails
   module Generators
-    class ModelGenerator
+    class ModelGenerator < NamedBase
 
       def create_vertebrae_model
         invoke "vertebrae:model" #unless options.skip_model?
