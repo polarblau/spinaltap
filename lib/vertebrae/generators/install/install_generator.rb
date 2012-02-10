@@ -32,7 +32,7 @@ module Vertebrae
       end
 
       def create_app_initializer_file
-        template "app.coffee", "#{javascripts_path}/app.js.coffee"
+        template "app.coffee", "#{javascripts_path}/#{app_name.underscore}.js.coffee"
       end
 
       def create_app_router_file

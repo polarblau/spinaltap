@@ -47,8 +47,9 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   # should generate application file
 
   def test_should_create_application_file
+    Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator
-    assert_file "#{javascripts_path}/app.js.coffee"
+    assert_file "#{javascripts_path}/test_app.js.coffee"
   end
 
   # should generate routes 
@@ -88,7 +89,7 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   def test_should_create_application_file_with_namespace
     Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator
-    assert_file "#{javascripts_path}/app.js.coffee", /TestApp =/
+    assert_file "#{javascripts_path}/test_app.js.coffee", /TestApp =/
   end
 
   # should include require into application.js
