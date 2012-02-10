@@ -33,6 +33,7 @@ module Vertebrae
 
       def create_templates_directory
         empty_directory "#{assets_path}/templates"
+        create_file "#{assets_path}/templates/.gitkeep", :verbose => false
       end
 
       def create_app_folder_structure
@@ -41,6 +42,7 @@ module Vertebrae
         directories << 'collections' unless options.skip_collections?
         directories.each do |directory|
           empty_directory "#{javascripts_path}/#{directory}"
+          create_file "#{javascripts_path}/#{directory}/.gitkeep", :verbose => false
         end
       end
 

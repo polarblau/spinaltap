@@ -18,21 +18,25 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   def test_should_create_a_models_folder
     run_generator
     assert_directory "#{javascripts_path}/models"
+    assert_file "#{javascripts_path}/models/.gitkeep"
   end
 
   def test_should_create_a_collections_folder
     run_generator
     assert_directory "#{javascripts_path}/collections"
+    assert_file "#{javascripts_path}/collections/.gitkeep"
   end
 
   def test_should_create_a_views_folder
     run_generator
     assert_directory "#{javascripts_path}/views"
+    assert_file "#{javascripts_path}/views/.gitkeep"
   end
 
   def test_should_create_a_templates_folder
     run_generator
     assert_directory "#{assets_path}/templates"
+    assert_file "#{assets_path}/templates/.gitkeep"
   end
 
   def test_should_create_a_config_folder

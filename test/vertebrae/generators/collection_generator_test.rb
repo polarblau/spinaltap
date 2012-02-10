@@ -33,6 +33,7 @@ class CollectionGeneratorTest < Rails::Generators::TestCase
 
   def test_should_trigger_model_generator
     skip
+    Vertebrae::Generators::ModelGenerator.any_instance.expects(:invoke)
   end
 
 end

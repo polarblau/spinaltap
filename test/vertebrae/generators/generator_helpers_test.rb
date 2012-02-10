@@ -42,5 +42,4 @@ class GeneratorHelpersTest < MiniTest::Unit::TestCase
     assert_equal @helpers.app_name, "TestApp"
   end
 
-
 end
