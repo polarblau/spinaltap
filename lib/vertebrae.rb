@@ -7,3 +7,5 @@ require "vertebrae/generators/named_generator_helpers"
 require "vertebrae/generators/install/install_generator"
 require "vertebrae/generators/model/model_generator"
 require "vertebrae/generators/collection/collection_generator"
+
+require "rails/generators/model_generator"
