@@ -1,4 +1,5 @@
 require "rails"
+require "rails/generators"
 require "rails/generators/model_generator"
 require "rails/generators/resource_generator"
 
