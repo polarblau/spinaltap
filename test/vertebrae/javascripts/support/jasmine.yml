@@ -1,79 +1,27 @@
-# src_files
-#
-# Return an array of filepaths relative to src_dir to include before jasmine specs.
-# Default: []
-#
-# EXAMPLE:
-#
-# src_files:
-#   - lib/source1.js
-#   - lib/source2.js
-#   - dist/**/*.js
-#
-src_files:
-  - **/*.{js,coffee}
-  - ../../../../vendor/assets/javascripts/vertebrae/**/*.{js,coffee}
-
-# stylesheets
-#
-# Return an array of stylesheet filepaths relative to src_dir to include before jasmine specs.
-# Default: []
-#
-# EXAMPLE:
-#
-# stylesheets:
-#   - css/style.css
-#   - stylesheets/*.css
-#
-stylesheets:
-
-# helpers
-#
-# Return an array of filepaths relative to spec_dir to include before jasmine specs.
-# Default: ["helpers/**/*.js"]
-#
-# EXAMPLE:
-#
-# helpers:
-#   - helpers/**/*.js
-#
-helpers:
-  - ../helpers/**/*.js
-
-# spec_files
-#
-#  Return an array of filepaths relative to spec_dir to include.
-# Default: ["**/*[sS]pec.js"]
-#
-# EXAMPLE:
-#
-# spec_files:
-#   - **/*_spec.js
-#
-spec_files:
-  - dummy_spec.coffee
-  # - **/*_spec.{js,coffee}
-
-# src_dir
-#
 # Source directory path. Your src_files must be returned relative to this path. Will use root if left blank.
-# Default: project root
-#
-# EXAMPLE:
-#
-# src_dir: public
-#
 src_dir:
   - test/fixtures/assets/javascripts/
 
-# spec_dir
-#
+# Return an array of filepaths relative to src_dir to include before jasmine specs.
+src_files:
+  - vertebrae.js
+  - **/*.{js,coffee}
+
 # Spec directory path. Your spec_files must be returned relative to this path.
-# Default: spec/javascripts
-#
-# EXAMPLE:
-#
-# spec_dir: spec/javascripts
-#
 spec_dir:
-  - test/vertebrae/javascripts/spec 
+  - test/vertebrae/javascripts/spec
+
+# Return an array of filepaths relative to spec_dir to include.
+spec_files:
+  - **/*_spec.{js,coffee}
+
+asset_paths:
+  - test/fixtures/assets/javascripts
+  - vendor/assets/javascripts
+
+# Return an array of stylesheet filepaths relative to src_dir to include before jasmine specs.
+stylesheets:
+
+# Return an array of filepaths relative to spec_dir to include before jasmine specs.
+helpers:
+  - ../helpers/**/*.js
