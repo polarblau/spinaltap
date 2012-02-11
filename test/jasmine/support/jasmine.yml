@@ -5,7 +5,7 @@ src_dir:
 # Return an array of filepaths relative to src_dir to include before jasmine specs.
 src_files:
   - vertebrae.js
-  - **/*.{js,coffee}
+  - /**/*.{js,coffee}
 
 # Spec directory path. Your spec_files must be returned relative to this path.
 spec_dir:
@@ -13,7 +13,7 @@ spec_dir:
 
 # Return an array of filepaths relative to spec_dir to include.
 spec_files:
-  - **/*_spec.{js,coffee}
+  - /**/*_spec.{js,coffee}
 
 asset_paths:
   - test/resources/test_app/app/assets/javascripts
