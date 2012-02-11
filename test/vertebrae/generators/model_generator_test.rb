@@ -27,13 +27,13 @@ class ModelGeneratorTest < Rails::Generators::TestCase
   def test_should_create_a_model_file_with_correct_name
     Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator %w(foo)
-    assert_file "#{javascripts_path}/models/foo.js.coffee", /class TestApp.Models.Foo/ 
+    assert_model_equal "#{javascripts_path}/models/foo.js.coffee", "foo.js.coffee"
   end
  
   def test_should_create_a_model_file_with_correctly_nested_name
     Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator %w(bar/baz/bat/foo)
-    assert_file "#{javascripts_path}/models/bar/baz/bat/foo.js.coffee", /class TestApp.Models.Bar.Baz.Bat.Foo/ 
+    assert_model_equal "#{javascripts_path}/models/bar/baz/bat/foo.js.coffee", "foo_namespaced.js.coffee"
   end
  
 end
