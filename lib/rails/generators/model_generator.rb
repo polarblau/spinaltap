@@ -1,6 +1,8 @@
+require 'rails'
+
 module Rails
   module Generators
-    class ModelGenerator < ::Rails::Generators::NamedBase
+    class ModelGenerator < NamedBase
 
       class_option  :skip_vertebrae_collection, 
                     :type    => :boolean, 
