@@ -11,7 +11,8 @@
 #   - dist/**/*.js
 #
 src_files:
-  - **/*.js
+  - **/*.{js,coffee}
+  - ../../../../vendor/assets/javascripts/vertebrae/**/*.{js,coffee}
 
 # stylesheets
 #
@@ -50,7 +51,8 @@ helpers:
 #   - **/*_spec.js
 #
 spec_files:
-  - **/*_spec.js
+  - dummy_spec.coffee
+  # - **/*_spec.{js,coffee}
 
 # src_dir
 #

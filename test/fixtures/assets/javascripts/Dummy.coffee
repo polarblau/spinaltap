@@ -1,0 +1,3 @@
+class Dummy
+
+  foo: -> "bar"
