@@ -7,5 +7,7 @@ guard 'minitest' do
 end
 
 guard 'jasmine-headless-webkit' do
-  watch(%r{^app/assets/javascripts/(.*)\..*}) { |m| newest_js_file("spec/javascripts/#{m[1]}_spec") }
+  watch(%r{^test/fixtures/assets/javascripts/(.*)\..*}) do |m| 
+  	newest_js_file("test/vertebrae/javascripts/#{m[1]}_spec") 
+  end
 end
