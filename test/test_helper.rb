@@ -6,21 +6,18 @@ require 'rails'
 require 'rails/generators/test_case'
 require 'mocha'
 
+require File.expand_path(File.join(File.dirname(__FILE__), 'lib', 'vertebrae', 'generators', 'generators_test_helper'))
+
 # we load only main file which loads all others
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'vertebrae'))
 
-# sample models etc
-def fixtures_root
-  File.join(File.dirname(__FILE__), 'fixtures')
-end
-
 # core files like application.js
 def core_root
-  File.join(File.dirname(__FILE__), 'core')
+  File.expand_path(File.join(File.dirname(__FILE__), 'resources', 'core'))
 end
 
 def destination_root
-  File.expand_path(File.join(File.dirname(__FILE__), 'tmp'))
+  File.expand_path(File.join(File.dirname(__FILE__), '..', 'tmp'))
 end
 
 def fixtures_root

@@ -1,6 +1,6 @@
 # Source directory path. Your src_files must be returned relative to this path. Will use root if left blank.
 src_dir:
-  - test/fixtures/assets/javascripts/
+  - resources/test_app/app/assets/javascripts/
 
 # Return an array of filepaths relative to src_dir to include before jasmine specs.
 src_files:
@@ -9,14 +9,14 @@ src_files:
 
 # Spec directory path. Your spec_files must be returned relative to this path.
 spec_dir:
-  - test/vertebrae/javascripts/spec
+  - test/jasmine/spec
 
 # Return an array of filepaths relative to spec_dir to include.
 spec_files:
   - **/*_spec.{js,coffee}
 
 asset_paths:
-  - test/fixtures/assets/javascripts
+  - test/resources/test_app/app/assets/javascripts
   - vendor/assets/javascripts
 
 # Return an array of stylesheet filepaths relative to src_dir to include before jasmine specs.
