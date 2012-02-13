@@ -6,8 +6,8 @@ require 'vertebrae/version'
 Gem::Specification.new do |s|
   s.name              = "vertebrae"
   s.version           = Vertebrae::VERSION
-  s.authors           = %w(Florian Plank Piotr Gęga)
-  s.email             = %w(florian@polarblau.com piotrgega@gmail.com)
+  s.authors           = ["Florian Plank", "Piotr Gęga"]
+  s.email             = ["florian@polarblau.com", "piotrgega@gmail.com"]
   s.homepage          = "https://github.com/polarblau/vertebrae"
   s.summary           = "Yet another Rails / Backbone gem"
   s.description       = "Simplifies working with Backbone on Rails"
