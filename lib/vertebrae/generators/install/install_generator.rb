@@ -24,7 +24,7 @@ module Vertebrae
                     :default => false,
                     :desc    => "Skip generation of .gitkeep files for empty folders?"                    
 
-      def add_asset_mainfest
+      def add_asset_manifest
         insert_into_file "app/assets/javascripts/application.js",
           :after => %r{//= require +['"]?jquery['"]?\n} do
             "//= require vertebrae\n"
