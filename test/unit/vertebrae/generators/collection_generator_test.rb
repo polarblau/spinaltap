@@ -1,7 +1,6 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'test_helper'))
 
-class CollectionGeneratorTest < Rails::Generators::TestCase
-  include GeneratorsTestHelper
+class CollectionGeneratorTest < Vertebrae::Generators::GeneratorTest
   tests Vertebrae::Generators::CollectionGenerator
   
   # should generate a collection

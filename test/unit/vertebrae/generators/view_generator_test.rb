@@ -1,8 +1,7 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'test_helper'))
 
 
-class ViewGeneratorTest < Rails::Generators::TestCase
-  include GeneratorsTestHelper
+class ViewGeneratorTest < Vertebrae::Generators::GeneratorTest
   tests Vertebrae::Generators::ViewGenerator
   
   # should generate a view

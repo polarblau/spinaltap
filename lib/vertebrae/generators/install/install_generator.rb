@@ -25,9 +25,12 @@ module Vertebrae
                     :desc    => "Skip generation of .gitkeep files for empty folders?"                    
 
       def add_asset_manifest
-        insert_into_file "app/assets/javascripts/application.js",
-          :after => %r{//= require +['"]?jquery['"]?\n} do
+        if File.exists?(Rails.root.join(manifest_path))
+          insert_into_file manifest_path, :after => %r{//= require +['"]?jquery['"]?\n} do
             "//= require vertebrae\n"
+          end
+        else
+          say "Default manifest file doesn't exist. Remember to require 'vertebrae' in you custom manifest.'"
         end
       end
 
@@ -59,6 +62,12 @@ module Vertebrae
           end
         end
       end
+
+      private
+
+        def manifest_path
+          "app/assets/javascripts/application.js"
+        end
 
     end
   end

@@ -1,8 +1,7 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'test_helper'))
 
 
-class TemplateGeneratorTest < Rails::Generators::TestCase
-  include GeneratorsTestHelper
+class TemplateGeneratorTest < Vertebrae::Generators::GeneratorTest
   tests Vertebrae::Generators::TemplateGenerator
   
   # should generate a template

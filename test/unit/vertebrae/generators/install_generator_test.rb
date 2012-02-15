@@ -1,12 +1,12 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'test_helper'))
 
-class InstallGeneratorTest < Rails::Generators::TestCase
-  include GeneratorsTestHelper
+class InstallGeneratorTest < Vertebrae::Generators::GeneratorTest
   tests Vertebrae::Generators::InstallGenerator
-  
+
   # should generate folder structure
 
   def setup
+    super()
     reload_core
   end
 
@@ -86,7 +86,6 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   # application file should contain app namespace
 
   def test_should_create_application_file_with_namespace
-    Rails.application.class.stubs(:name).returns("TestApp::Application")
     run_generator
     assert_file "#{javascripts_path}/test_app.js.coffee", /TestApp =/
   end
