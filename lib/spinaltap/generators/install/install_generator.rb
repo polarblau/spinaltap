@@ -25,12 +25,12 @@ module Spinaltap
                     :desc    => "Skip generation of .gitkeep files for empty folders?"                    
 
       def add_asset_manifest
-        if File.exists?(Rails.root.join(manifest_path))
+        if manifest_exists?
           insert_into_file manifest_path, :after => %r{//= require +['"]?(jquery|zepto)['"]?\n} do
             "//= require spinaltap\n"
           end
         else
-          say "Default manifest file doesn't exist. Remember to require 'spinaltap' in you custom manifest.'"
+          warn_no_manifest
         end
       end
 
@@ -67,6 +67,18 @@ module Spinaltap
 
         def manifest_path
           "app/assets/javascripts/application.js"
+        end
+
+        def manifest_exists?
+          @manifest_exists ||= File.exists?(Rails.root.join(manifest_path))
+        end
+
+        def warn_duplicated_file(file_name)
+          say "Duplicated file: #{file_name}"
+        end
+
+        def warn_no_manifest
+          say "Default manifest file doesn't exist. Remember to require 'spinaltap' in you custom manifest.'"
         end
 
     end
