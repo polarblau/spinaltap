@@ -94,7 +94,7 @@ class InstallGeneratorTest < Spinaltap::Generators::GeneratorTest
   
   def test_should_include_requirement_into_manifest
     run_generator
-    assert_file "#{javascripts_path}/application.js", /\/\/= require spinaltap/
+    assert_file "#{javascripts_path}/application.js", /(\/\/= require spinaltap){1}/
   end
 
   # should include dependencies

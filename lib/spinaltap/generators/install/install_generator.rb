@@ -26,7 +26,7 @@ module Spinaltap
 
       def add_asset_manifest
         if File.exists?(Rails.root.join(manifest_path))
-          insert_into_file manifest_path, :after => %r{//= require +['"]?jquery['"]?\n} do
+          insert_into_file manifest_path, :after => %r{//= require +['"]?(jquery|zepto)['"]?\n} do
             "//= require spinaltap\n"
           end
         else
