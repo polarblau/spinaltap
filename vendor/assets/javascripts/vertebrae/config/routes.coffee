@@ -1,1 +1,0 @@
-class Vertebrae.Config.Routes extends Backbone.Router

@@ -1,1 +1,0 @@
-class Vertebrae.Base.View extends Backbone.View

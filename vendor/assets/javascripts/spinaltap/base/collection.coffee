@@ -1,0 +1,1 @@
+class Spinaltap.Base.Collection extends Backbone.Collection

@@ -1,0 +1,1 @@
+class <%= app_name %>.Config.Routes extends Spinaltap.Base.Router

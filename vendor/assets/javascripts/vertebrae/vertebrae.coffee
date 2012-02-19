@@ -1,3 +1,0 @@
-window.Vertebrae =
-  Base  : {}
-  Config: {}

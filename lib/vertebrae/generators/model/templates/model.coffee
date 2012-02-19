@@ -1,1 +1,0 @@
-class <%= model_namespace %> extends Vertebrae.Base.Model

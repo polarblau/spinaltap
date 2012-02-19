@@ -1,1 +1,0 @@
-class Vertebrae.Base.Model extends Backbone.Model

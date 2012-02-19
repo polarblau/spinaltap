@@ -1,1 +1,0 @@
-class <%= app_name %>.Config.Routes extends Vertebrae.Base.Router

@@ -1,0 +1,1 @@
+class Spinaltap.Config.Routes extends Backbone.Router

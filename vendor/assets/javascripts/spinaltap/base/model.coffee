@@ -1,0 +1,1 @@
+class Spinaltap.Base.Model extends Backbone.Model

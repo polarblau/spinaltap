@@ -1,1 +1,1 @@
-class TestApp.Models.Bar.Baz.Bat.Foo extends Vertebrae.Base.Model
+class TestApp.Models.Bar.Baz.Bat.Foo extends Spinaltap.Base.Model

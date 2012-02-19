@@ -1,0 +1,3 @@
+window.Spinaltap =
+  Base  : {}
+  Config: {}

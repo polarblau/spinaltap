@@ -1,4 +1,4 @@
-class TestApp.Models.Foo extends Vertebrae.Base.Model
+class TestApp.Models.Foo extends Spinaltap.Base.Model
 
   hello: ->
     "Hello World"

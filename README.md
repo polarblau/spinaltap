@@ -1,4 +1,4 @@
-## Vertebrae [![Build Status](https://secure.travis-ci.org/polarblau/vertebrae.png?branch=master)](http://travis-ci.org/polarblau/vertebrae)
+## Spinaltap [![Build Status](https://secure.travis-ci.org/polarblau/spinaltap.png?branch=master)](http://travis-ci.org/polarblau/spinaltap)
 
 
 ### Development
@@ -13,6 +13,6 @@ Due to a [bug in the current guard-minitest](https://github.com/guard/guard-mini
 $ git clone https://github.com/grimen/guard-minitest.git guard-minitest
 $ cd guard-minitest
 $ gem build guard-minitest.gemspec
-$ cd ../path/to/vertebrae/gem
+$ cd ../path/to/spinaltap/gem
 $ gem install ../path/to/guard-minitest/guard-minitest-0.4.0.gem
 ```
