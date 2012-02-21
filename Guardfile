@@ -5,9 +5,3 @@ guard 'minitest' do
 
   watch(%r|test_helper\.rb|){ "test" }
 end
-
-guard 'jasmine-headless-webkit' do
-  watch(%r{^test/resources/test_app/assets/javascripts/(.*)\..*}) do |m|
-    newest_js_file("test/jasmine/spec/#{m[1]}_spec")
-  end
-end

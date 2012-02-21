@@ -5,6 +5,7 @@ require 'minitest/spec'
 require 'rails'
 require 'rails/generators/test_case'
 require 'mocha'
+require 'execjs'
 
 # we load only main file which loads all others
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'spinaltap'))

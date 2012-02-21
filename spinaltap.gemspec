@@ -26,8 +26,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency "mocha",                   "~> 0.10.3"
   s.add_development_dependency "coffee-script",           "~> 2.2.0"
   s.add_development_dependency "execjs",                  "~> 1.3.0"
-  s.add_development_dependency "johnson"
-  s.add_development_dependency "mustang"
+  # s.add_development_dependency "johnson"
+  # s.add_development_dependency "mustang"
   s.add_development_dependency "therubyracer"
   s.add_development_dependency "therubyrhino"
 
