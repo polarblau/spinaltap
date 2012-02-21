@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary           = "Yet another Rails / Backbone gem"
   s.description       = "Simplifies working with Backbone on Rails"
      
-  s.files             = `git ls-files app lib`.split("\n")
+  s.files             = `git ls-files lib vendor`.split("\n")
   s.platform          = Gem::Platform::RUBY
   s.require_path      = 'lib'
   s.rubyforge_project = '[none]'
