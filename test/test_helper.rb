@@ -6,6 +6,7 @@ require 'rails'
 require 'rails/generators/test_case'
 require 'mocha'
 require 'execjs'
+require 'coffee_script'
 
 # we load only main file which loads all others
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'spinaltap'))
